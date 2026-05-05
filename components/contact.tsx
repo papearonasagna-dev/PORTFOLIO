@@ -14,6 +14,12 @@ const contactInfo = [
     secondary: "+221 77 140 07 93",
   },
   {
+    icon: Mail,
+    label: "E-mail",
+    value: "papearonasagna@gmail.com",
+    secondary: "sallgnagna71@gmail.com",
+  },
+  {
     icon: MapPin,
     label: "Localisation",
     value: "Dakar, Senegal",

@@ -69,7 +69,7 @@ export function Hero() {
                   ))}
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-navy">500+ clients satisfaits</p>
+                  <p className="text-sm font-medium text-navy">50+ clients satisfaits</p>
                   <p className="text-xs text-gray">Entreprises & Particuliers</p>
                 </div>
               </div>
@@ -115,8 +115,8 @@ export function Hero() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-border">
             {[
-              { value: "15+", label: "Annees d'experience" },
-              { value: "500+", label: "Dossiers traites" },
+              { value: "2", label: "Annees d'experience" },
+              { value: "50+", label: "Dossiers traites" },
               { value: "98%", label: "Clients satisfaits" },
               { value: "24h", label: "Reponse garantie" },
             ].map((stat, index) => (
