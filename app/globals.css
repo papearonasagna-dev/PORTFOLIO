@@ -1,0 +1,128 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Primary - Deep Navy */
+  --navy: #1A2B4A;
+  --navy-soft: #2A3B5A;
+  
+  /* Accent - Rich Gold */
+  --gold: #C5A047;
+  --gold-muted: #A8873A;
+  
+  /* Neutrals - Warm tones */
+  --stone: #FAF8F5;
+  --stone-dark: #F0EBE3;
+  --white: #FFFFFF;
+  --black: #1A1A1A;
+  --gray: #5A5A5A;
+  --gray-light: #8A8A8A;
+  
+  /* Design tokens */
+  --background: var(--stone);
+  --foreground: var(--black);
+  --card: var(--white);
+  --card-foreground: var(--black);
+  --popover: var(--white);
+  --popover-foreground: var(--black);
+  --primary: var(--navy);
+  --primary-foreground: var(--white);
+  --secondary: var(--gold);
+  --secondary-foreground: var(--white);
+  --accent: var(--stone-dark);
+  --accent-foreground: var(--black);
+  --muted: var(--stone-dark);
+  --muted-foreground: var(--gray);
+  --destructive: #DC2626;
+  --destructive-foreground: var(--white);
+  --border: #E2E0DC;
+  --input: #E2E0DC;
+  --ring: var(--gold);
+  --radius: 0rem;
+}
+
+@theme inline {
+  --font-sans: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Cormorant Garamond Fallback', Georgia, serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 0rem;
+  --radius-md: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
+  
+  /* Custom colors */
+  --color-navy: var(--navy);
+  --color-navy-soft: var(--navy-soft);
+  --color-gold: var(--gold);
+  --color-gold-muted: var(--gold-muted);
+  --color-stone: var(--stone);
+  --color-stone-dark: var(--stone-dark);
+  --color-gray: var(--gray);
+  --color-gray-light: var(--gray-light);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+  background: var(--gold);
+  color: var(--white);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Typography enhancements */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Smooth image loading */
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+img[loading] {
+  opacity: 0;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
